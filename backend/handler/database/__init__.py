@@ -18,6 +18,7 @@ from .play_sessions_handler import DBPlaySessionsHandler
 from .recommendations_handler import DBRecommendationsHandler
 from .roms_handler import DBRomsHandler
 from .saves_handler import DBSavesHandler
+from .scheduled_announcements_handler import DBScheduledAnnouncementsHandler
 from .screenshots_handler import DBScreenshotsHandler
 from .states_handler import DBStatesHandler
 from .stats_handler import DBStatsHandler
@@ -44,6 +45,7 @@ db_play_session_handler = DBPlaySessionsHandler()
 db_recommendation_handler = DBRecommendationsHandler()
 db_rom_handler = DBRomsHandler()
 db_save_handler = DBSavesHandler()
+db_scheduled_announcement_handler = DBScheduledAnnouncementsHandler()
 db_screenshot_handler = DBScreenshotsHandler()
 db_state_handler = DBStatesHandler()
 db_stats_handler = DBStatsHandler()

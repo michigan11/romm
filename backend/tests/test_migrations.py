@@ -260,7 +260,8 @@ def _replay(connection: sa.Connection, filename: str) -> None:
         ("0151_state_content_hash.py", "states"),
         ("0154_announcement.py", "announcements"),
         ("0154_announcement.py", "announcement_dismissals"),
-        ("0155_feedback.py", "feedback"),
+        ("0155_scheduled_announcements.py", "scheduled_announcements"),
+        ("0156_feedback.py", "feedback"),
     ],
 )
 def test_a_revision_replayed_over_the_migrated_schema_is_a_no_op(
@@ -271,6 +272,23 @@ def test_a_revision_replayed_over_the_migrated_schema_is_a_no_op(
         _replay(connection, filename)
 
         assert _schema_of(connection, table) == before
+
+
+def test_the_scheduled_announcements_revision_reverses_and_replays():
+    migration = _load_migration("0155_scheduled_announcements.py")
+
+    with sync_engine.begin() as connection:
+        before = _schema_of(connection, "scheduled_announcements")
+        with Operations.context(MigrationContext.configure(connection)):
+            migration.downgrade()
+            assert not sa.inspect(connection).has_table("scheduled_announcements")
+
+            migration.downgrade()
+            migration.upgrade()
+            migration.upgrade()
+
+        assert sa.inspect(connection).has_table("scheduled_announcements")
+        assert _schema_of(connection, "scheduled_announcements") == before
 
 
 def test_the_play_session_sync_link_revision_reverses_and_replays():

@@ -1,7 +1,7 @@
 """Add user feedback notes, including game requests.
 
-Revision ID: 0155_feedback
-Revises: 0154_announcement
+Revision ID: 0156_feedback
+Revises: 0155_scheduled_announcements
 Create Date: 2026-11-14 00:00:00.000000
 
 """
@@ -19,8 +19,8 @@ from models.feedback import (
     FEEDBACK_USERNAME_MAX_LENGTH,
 )
 
-revision = "0155_feedback"
-down_revision = "0154_announcement"
+revision = "0156_feedback"
+down_revision = "0155_scheduled_announcements"
 branch_labels = None
 depends_on = None
 
