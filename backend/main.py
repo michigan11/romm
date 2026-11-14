@@ -29,6 +29,7 @@ from config import (
     cors_allow_credentials,
 )
 from endpoints.activity import router as activity_router
+from endpoints.announcement import router as announcement_router
 from endpoints.audit_events import router as audit_events_router
 from endpoints.auth import router as auth_router
 from endpoints.channels import router as channels_router
@@ -194,6 +195,7 @@ app.include_router(activity_router, prefix="/api")
 app.include_router(audit_events_router, prefix="/api")
 app.include_router(user_router, prefix="/api")
 app.include_router(client_tokens_router, prefix="/api")
+app.include_router(announcement_router, prefix="/api")
 app.include_router(notifications_router, prefix="/api")
 app.include_router(notification_channels_router, prefix="/api")
 app.include_router(device_router, prefix="/api")

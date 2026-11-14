@@ -12,6 +12,8 @@
   "all-files-skipped": "Alle Dateien übersprungen, nichts hochgeladen.",
   "all-platforms": "Alle Plattformen",
   "and": "und",
+  "announcement-dismiss": "Verstanden",
+  "announcement-dismiss-failed": "Die Ankündigung konnte nicht geschlossen werden",
   "apply": "Anwenden",
   "artists-n": "{n} Künstler | {n} Künstler",
   "ascii-only": "Nur ASCII-Zeichen",
