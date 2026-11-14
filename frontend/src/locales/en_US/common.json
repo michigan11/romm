@@ -13,6 +13,8 @@
   "all-files-skipped": "All files skipped, nothing uploaded.",
   "all-platforms": "All platforms",
   "and": "and",
+  "announcement-dismiss": "Got it",
+  "announcement-dismiss-failed": "Could not dismiss the announcement",
   "apply": "Apply",
   "artists-n": "{n} artist | {n} artists",
   "ascii-only": "ASCII characters only",

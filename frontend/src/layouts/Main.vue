@@ -3,6 +3,7 @@ import { useLocalStorage } from "@vueuse/core";
 import type { Emitter } from "mitt";
 import { inject, onBeforeMount } from "vue";
 import EditUserDialog from "@/components/Settings/Administration/Users/Dialog/EditUser.vue";
+import AnnouncementDialog from "@/components/common/AnnouncementDialog.vue";
 import AddRomsToCollectionDialog from "@/components/common/Collection/Dialog/AddRoms.vue";
 import RemoveRomsFromCollectionDialog from "@/components/common/Collection/Dialog/RemoveRoms.vue";
 import LoadingDialog from "@/components/common/Dialog/LoadingDialog.vue";
@@ -95,6 +96,7 @@ onBeforeMount(async () => {
   <NoteDialog />
   <ShowQRCodeDialog />
   <NewVersionDialog />
+  <AnnouncementDialog />
   <TryV2Banner />
   <UploadSavesDialog />
   <DeleteSavesDialog />

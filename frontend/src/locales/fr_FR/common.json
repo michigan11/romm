@@ -13,6 +13,8 @@
   "all-files-skipped": "Tous les fichiers ont été ignorés, rien n'a été téléversé.",
   "all-platforms": "Toutes les plateformes",
   "and": "et",
+  "announcement-dismiss": "Compris",
+  "announcement-dismiss-failed": "Impossible de fermer l'annonce",
   "apply": "Appliquer",
   "artists-n": "{n} artiste | {n} artistes",
   "ascii-only": "Uniquement des caractères ASCII",

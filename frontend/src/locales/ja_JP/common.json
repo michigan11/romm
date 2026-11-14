@@ -13,6 +13,8 @@
   "all-files-skipped": "すべてのファイルがスキップされ、アップロードされたものはありません。",
   "all-platforms": "すべてのプラットフォーム",
   "and": "と",
+  "announcement-dismiss": "了解",
+  "announcement-dismiss-failed": "お知らせを閉じられませんでした",
   "apply": "適用",
   "artists-n": "{n}人のアーティスト",
   "ascii-only": "ASCII文字のみ",

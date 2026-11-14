@@ -13,6 +13,8 @@
   "all-files-skipped": "Todos os arquivos foram ignorados, nada foi enviado.",
   "all-platforms": "Todas as plataformas",
   "and": "e",
+  "announcement-dismiss": "Entendi",
+  "announcement-dismiss-failed": "Não foi possível fechar o aviso",
   "apply": "Aplicar",
   "artists-n": "{n} artista | {n} artistas",
   "ascii-only": "Somente caracteres ASCII",

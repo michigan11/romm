@@ -13,6 +13,8 @@
   "all-files-skipped": "Tüm dosyalar atlandı, hiçbir şey yüklenmedi.",
   "all-platforms": "Tüm platformlar",
   "and": "ve",
+  "announcement-dismiss": "Anladım",
+  "announcement-dismiss-failed": "Duyuru kapatılamadı",
   "apply": "Uygula",
   "artists-n": "{n} sanatçı",
   "ascii-only": "Yalnızca ASCII karakterler",

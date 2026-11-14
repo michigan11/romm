@@ -13,6 +13,8 @@
   "all-files-skipped": "所有檔案皆已跳過，未上傳任何內容。",
   "all-platforms": "所有平台",
   "and": "和",
+  "announcement-dismiss": "知道了",
+  "announcement-dismiss-failed": "無法關閉公告",
   "apply": "套用",
   "artists-n": "{n} 位藝人",
   "ascii-only": "僅限 ASCII 字元",

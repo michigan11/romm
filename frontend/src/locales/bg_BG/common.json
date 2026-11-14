@@ -13,6 +13,8 @@
   "all-files-skipped": "Всички файлове са пропуснати, нищо не е качено.",
   "all-platforms": "Всички платформи",
   "and": "и",
+  "announcement-dismiss": "Разбрах",
+  "announcement-dismiss-failed": "Обявлението не можа да бъде затворено",
   "apply": "Приложи",
   "artists-n": "{n} изпълнител | {n} изпълнители",
   "ascii-only": "Само ASCII символи",

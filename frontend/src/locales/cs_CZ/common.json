@@ -13,6 +13,8 @@
   "all-files-skipped": "Všechny soubory přeskočeny, nic nebylo nahráno.",
   "all-platforms": "Všechny platformy",
   "and": "a",
+  "announcement-dismiss": "Rozumím",
+  "announcement-dismiss-failed": "Oznámení se nepodařilo zavřít",
   "apply": "Použít",
   "artists-n": "{n} interpret | {n} interpreti",
   "ascii-only": "Pouze ASCII znaky",

@@ -13,6 +13,8 @@
   "all-files-skipped": "모든 파일이 건너뛰어졌습니다. 업로드된 파일이 없습니다.",
   "all-platforms": "모든 플랫폼",
   "and": "및",
+  "announcement-dismiss": "확인",
+  "announcement-dismiss-failed": "공지를 닫지 못했습니다",
   "apply": "적용",
   "artists-n": "아티스트 {n}명",
   "ascii-only": "ASCII 문자만",
