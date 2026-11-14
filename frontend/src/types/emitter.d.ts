@@ -116,6 +116,7 @@ export type Events = {
   showRegenerateClientTokenDialog: ClientTokenSchema;
   showDeleteClientTokenDialog: ClientTokenSchema;
   showAboutDialog: null;
+  showFeedbackDialog: null;
   showChangelogDialog: null;
   showNoteDialog: SimpleRom;
   showDeleteManualDialog: {

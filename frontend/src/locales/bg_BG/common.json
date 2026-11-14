@@ -147,6 +147,7 @@
   "search": "Търси",
   "select": "Избери",
   "select-platform": "Избери платформа",
+  "send-feedback": "Изпрати обратна връзка",
   "server-offline-retrying": "Връзката със сървъра е прекъсната, повторен опит…",
   "server-reconnected": "Reconnected to the server",
   "server-stats": "Статистики на сървъра",

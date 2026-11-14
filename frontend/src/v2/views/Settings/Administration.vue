@@ -16,6 +16,7 @@ import storePermissions from "@/stores/permissions";
 import AnnouncementSection from "@/v2/components/Settings/AnnouncementSection.vue";
 import CreateUserDialog from "@/v2/components/Settings/CreateUserDialog.vue";
 import EditUserDialog from "@/v2/components/Settings/EditUserDialog.vue";
+import FeedbackSection from "@/v2/components/Settings/FeedbackSection.vue";
 import GroupFormDialog from "@/v2/components/Settings/GroupFormDialog.vue";
 import InviteLinkDialog from "@/v2/components/Settings/InviteLinkDialog.vue";
 import PermissionGroupsSection from "@/v2/components/Settings/PermissionGroupsSection.vue";
@@ -31,13 +32,15 @@ const auth = storeAuth();
 const permissions = storePermissions();
 const isAdmin = useCan("app.admin");
 
-type Tab = "users" | "groups" | "tasks" | "streaming" | "announcement";
+type Tab =
+  "users" | "groups" | "tasks" | "streaming" | "announcement" | "feedback";
 const validTabs: readonly Tab[] = [
   "users",
   "groups",
   "tasks",
   "streaming",
   "announcement",
+  "feedback",
 ];
 
 const tab = useRouteQueryParam("tab", "users", validTabs);
@@ -74,6 +77,11 @@ const tabs = computed<RTabNavItem[]>(() => {
       id: "announcement",
       label: t("settings.announcement"),
       icon: "mdi-bullhorn-outline",
+    });
+    items.push({
+      id: "feedback",
+      label: t("settings.feedback"),
+      icon: "mdi-message-text-outline",
     });
   }
   return items;
@@ -114,6 +122,7 @@ const tabModel = computed<string>({
       v-if="isAdmin"
       v-show="tab === 'announcement'"
     />
+    <FeedbackSection v-if="tab === 'feedback' && isAdmin" />
 
     <CreateUserDialog />
     <EditUserDialog />

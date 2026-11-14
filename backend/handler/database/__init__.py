@@ -6,6 +6,7 @@ from .container_adoptions_handler import DBContainerAdoptionsHandler
 from .deleted_assets_handler import DBDeletedAssetsHandler
 from .device_save_sync_handler import DBDeviceSaveSyncHandler
 from .devices_handler import DBDevicesHandler
+from .feedback_handler import DBFeedbackHandler
 from .firmware_handler import DBFirmwareHandler
 from .memory_cards_handler import DBMemoryCardsHandler
 from .music_playlists_handler import DBMusicPlaylistsHandler
@@ -32,6 +33,7 @@ db_container_adoption_handler = DBContainerAdoptionsHandler()
 db_deleted_asset_handler = DBDeletedAssetsHandler()
 db_device_handler = DBDevicesHandler()
 db_device_save_sync_handler = DBDeviceSaveSyncHandler()
+db_feedback_handler = DBFeedbackHandler()
 db_firmware_handler = DBFirmwareHandler()
 db_memory_card_handler = DBMemoryCardsHandler()
 db_music_playlist_handler = DBMusicPlaylistsHandler()

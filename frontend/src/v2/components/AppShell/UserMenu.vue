@@ -90,6 +90,11 @@ function showAbout() {
   emitter?.emit("showAboutDialog", null);
 }
 
+function showFeedback() {
+  open.value = false;
+  emitter?.emit("showFeedbackDialog", null);
+}
+
 function showChangelog() {
   open.value = false;
   emitter?.emit("showChangelogDialog", null);
@@ -344,6 +349,11 @@ async function onLogout() {
     <!-- About is visible to everyone; Changelog is gated to editor+ (it
            surfaces librarian-oriented release notes). Both remain dialogs
            (no dedicated views). -->
+    <RMenuItem
+      icon="mdi-message-text-outline"
+      :label="t('common.send-feedback')"
+      @click="showFeedback"
+    />
     <RMenuItem
       icon="mdi-help-circle-outline"
       :label="t('common.about')"

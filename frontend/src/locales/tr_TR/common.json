@@ -147,6 +147,7 @@
   "search": "Ara",
   "select": "Seç",
   "select-platform": "Platform seçin",
+  "send-feedback": "Geri bildirim gönder",
   "server-offline-retrying": "Sunucu bağlantısı kesildi, yeniden bağlanılıyor…",
   "server-reconnected": "Sunucuya yeniden bağlanıldı",
   "server-stats": "Sunucu istatistikleri",
