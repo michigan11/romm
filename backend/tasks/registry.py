@@ -159,6 +159,23 @@ CLEANUP_UPLOAD_TMP_SPEC: Final = TaskSpec(
     cron_string=SCHEDULED_CLEANUP_UPLOAD_TMP_CRON,
 )
 
+ACTIVATE_SCHEDULED_ANNOUNCEMENTS_SPEC: Final = TaskSpec(
+    implementation=(
+        "tasks.scheduled.activate_scheduled_announcements"
+        ".activate_scheduled_announcements_task"
+    ),
+    title="Scheduled announcements",
+    description=(
+        "Publishes scheduled announcements that are due and ends those that are finished"
+    ),
+    task_type=TaskType.GENERIC,
+    enabled=True,
+    # Often enough that a notice goes live with nobody signed in.
+    cron_string="* * * * *",
+    # A run every minute would otherwise fill the job history.
+    result_ttl=0,
+)
+
 REAP_STREAMING_SESSIONS_SPEC: Final = TaskSpec(
     implementation="tasks.scheduled.reap_streaming_sessions.reap_streaming_sessions_task",
     title="Scheduled streaming session reaper",
@@ -281,6 +298,7 @@ SCHEDULED_TASKS: Final[dict[str, TaskSpec]] = {
     "cleanup_orphaned_resources": CLEANUP_ORPHANED_RESOURCES_SPEC,
     "cleanup_netplay": CLEANUP_NETPLAY_SPEC,
     "cleanup_upload_tmp": CLEANUP_UPLOAD_TMP_SPEC,
+    "activate_scheduled_announcements": ACTIVATE_SCHEDULED_ANNOUNCEMENTS_SPEC,
     "reap_streaming_sessions": REAP_STREAMING_SESSIONS_SPEC,
     "cleanup_sync_sessions": CLEANUP_SYNC_SESSIONS_SPEC,
     "cleanup_audit_log": CLEANUP_AUDIT_LOG_SPEC,

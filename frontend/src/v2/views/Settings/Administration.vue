@@ -19,6 +19,7 @@ import EditUserDialog from "@/v2/components/Settings/EditUserDialog.vue";
 import GroupFormDialog from "@/v2/components/Settings/GroupFormDialog.vue";
 import InviteLinkDialog from "@/v2/components/Settings/InviteLinkDialog.vue";
 import PermissionGroupsSection from "@/v2/components/Settings/PermissionGroupsSection.vue";
+import ScheduledAnnouncementsSection from "@/v2/components/Settings/ScheduledAnnouncementsSection.vue";
 import StreamingSection from "@/v2/components/Settings/StreamingSection.vue";
 import TasksSection from "@/v2/components/Settings/TasksSection.vue";
 import UsersSection from "@/v2/components/Settings/UsersSection.vue";
@@ -109,6 +110,10 @@ const tabModel = computed<string>({
     <StreamingSection v-else-if="tab === 'streaming' && isAdmin" />
     <!-- Stays mounted across tab changes so an unsaved draft is not dropped. -->
     <AnnouncementSection v-if="isAdmin" v-show="tab === 'announcement'" />
+    <ScheduledAnnouncementsSection
+      v-if="isAdmin"
+      v-show="tab === 'announcement'"
+    />
 
     <CreateUserDialog />
     <EditUserDialog />

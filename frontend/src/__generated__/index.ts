@@ -264,6 +264,8 @@ export type { ScanStats } from './models/ScanStats';
 export type { ScanTaskMeta } from './models/ScanTaskMeta';
 export type { ScanTaskStatusResponse } from './models/ScanTaskStatusResponse';
 export type { ScanType } from './models/ScanType';
+export type { ScheduledAnnouncementSchema } from './models/ScheduledAnnouncementSchema';
+export type { ScheduledAnnouncementWrite } from './models/ScheduledAnnouncementWrite';
 export type { ScreenshotSchema } from './models/ScreenshotSchema';
 export type { SearchCoverSchema } from './models/SearchCoverSchema';
 export type { SearchRomSchema } from './models/SearchRomSchema';

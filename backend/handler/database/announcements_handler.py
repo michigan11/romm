@@ -38,14 +38,15 @@ class DBAnnouncementsHandler(DBBaseHandler):
         enabled: bool,
         title: str,
         message: str,
+        bump_revision: bool = False,
         session: Session = INJECTED_SESSION,
     ) -> Announcement:
-        """Store the notice. The revision moves only when the text changes."""
+        """Store the notice. The revision moves when the text changes, or when `bump_revision` is set."""
         row = session.get(Announcement, ANNOUNCEMENT_ID)
         if row is None:
             row = _empty()
             session.add(row)
-        if title != row.title or message != row.message:
+        if bump_revision or title != row.title or message != row.message:
             row.revision += 1
         row.enabled = enabled
         row.title = title
