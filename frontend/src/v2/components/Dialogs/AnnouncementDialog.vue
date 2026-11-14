@@ -95,28 +95,51 @@ async function acknowledge() {
 </template>
 
 <style scoped>
-.r-v2-announcement-dialog__body {
+/* The class lands on md-editor's own root, which ships its own font stack,
+   surface and colors. Point md-editor's theme variables at the app tokens so
+   the notice reads like the body of the other v2 dialogs (ConfirmDialog). */
+.r-v2-announcement-dialog__body.md-editor {
+  --md-color: var(--r-color-fg-secondary);
+  --md-bk-color: transparent;
+  --md-border-color: var(--r-color-border);
   min-width: 0;
-  border-radius: var(--r-radius-lg);
-  background: var(--r-color-bg-elevated);
-  padding: 4px 16px;
+  background: transparent;
+  color: var(--r-color-fg-secondary);
+  font-family: var(--r-font-family-sans);
 }
 
-.r-v2-announcement-dialog__body :deep(.md-editor),
 .r-v2-announcement-dialog__body :deep(.md-editor-preview-wrapper) {
   background: transparent;
-  color: var(--r-color-fg);
+  color: var(--r-color-fg-secondary);
   padding: 0;
 }
 
-.r-v2-announcement-dialog__body :deep(.md-editor-preview) {
+.r-v2-announcement-dialog__body :deep(.md-editor-preview.vuepress-theme) {
+  --md-theme-color: var(--r-color-fg-secondary);
+  --md-theme-heading-color: var(--r-color-fg-heading);
+  --md-theme-link-color: var(--r-color-brand-primary);
+  --md-theme-border-color: var(--r-color-border);
+  --md-theme-quote-border: 4px solid var(--r-color-border-strong);
+  --md-theme-table-td-border-color: var(--r-color-border);
+  --md-theme-table-stripe-color: var(--r-color-surface);
+  --md-theme-code-inline-color: var(--r-color-fg);
+  --md-theme-code-block-color: var(--r-color-fg);
   background: transparent !important;
-  color: var(--r-color-fg);
-  font-family: inherit;
+  color: var(--r-color-fg-secondary);
+  font-family: var(--r-font-family-sans);
+  font-size: var(--r-font-size-md);
   word-break: break-word;
   overflow-wrap: anywhere;
-  line-height: 1.55;
+  line-height: var(--r-line-height-normal);
   padding: 0;
+}
+
+.r-v2-announcement-dialog__body :deep(.md-editor-preview > :first-child) {
+  margin-top: 0;
+}
+
+.r-v2-announcement-dialog__body :deep(.md-editor-preview > :last-child) {
+  margin-bottom: 0;
 }
 
 .r-v2-announcement-dialog__body :deep(.md-editor-preview pre) {
@@ -136,7 +159,8 @@ async function acknowledge() {
 
 .r-v2-announcement-dialog__body :deep(.md-editor-preview code),
 .r-v2-announcement-dialog__body :deep(.md-editor-preview pre) {
-  background: color-mix(in srgb, black 30%, transparent) !important;
+  background: var(--r-color-surface) !important;
   color: var(--r-color-fg) !important;
+  font-family: var(--r-font-family-mono);
 }
 </style>

@@ -83,3 +83,37 @@ async function acknowledge() {
     </v-card>
   </v-dialog>
 </template>
+
+<style scoped>
+/* md-editor ships its own font stack, white or black surface and grey
+   text. Take the card's font and the Vuetify theme colors instead. */
+.v-card-text :deep(.md-editor) {
+  --md-color: rgb(var(--v-theme-on-surface));
+  --md-bk-color: transparent;
+  --md-border-color: rgba(var(--v-border-color), var(--v-border-opacity));
+  background: transparent;
+  color: rgb(var(--v-theme-on-surface));
+  font-family: inherit;
+}
+
+.v-card-text :deep(.md-editor-preview.vuepress-theme) {
+  --md-theme-color: rgb(var(--v-theme-on-surface));
+  --md-theme-heading-color: rgb(var(--v-theme-on-surface));
+  --md-theme-link-color: rgb(var(--v-theme-primary));
+  --md-theme-border-color: rgba(var(--v-border-color), var(--v-border-opacity));
+  --md-theme-quote-border: 4px solid rgb(var(--v-theme-secondary));
+  --md-theme-table-td-border-color: rgba(
+    var(--v-border-color),
+    var(--v-border-opacity)
+  );
+  --md-theme-table-stripe-color: rgb(var(--v-theme-toplayer));
+  --md-theme-code-inline-bg-color: rgb(var(--v-theme-toplayer));
+  --md-theme-code-block-bg-color: rgb(var(--v-theme-toplayer));
+  background: transparent !important;
+  color: rgb(var(--v-theme-on-surface));
+  font-family: inherit;
+  font-size: inherit;
+  word-break: break-word;
+  padding: 0;
+}
+</style>
