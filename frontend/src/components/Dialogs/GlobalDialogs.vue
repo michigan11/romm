@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import AboutDialog from "@/components/Dialogs/AboutDialog.vue";
 import AddPhysicalGameDialog from "@/components/Dialogs/AddPhysicalGameDialog.vue";
+import AnnouncementDialog from "@/components/Dialogs/AnnouncementDialog.vue";
 import ChangelogDialog from "@/components/Dialogs/ChangelogDialog.vue";
 import CopyDownloadLinkDialog from "@/components/Dialogs/CopyDownloadLinkDialog.vue";
 import CreateSmartCollectionDialog from "@/components/Dialogs/CreateSmartCollectionDialog.vue";
@@ -43,6 +44,7 @@ defineOptions({ inheritAttrs: false });
   <CreateSmartCollectionDialog />
   <AddPhysicalGameDialog />
   <AboutDialog />
+  <AnnouncementDialog />
   <ChangelogDialog />
   <LoadSaveStateDialog />
   <EmulatorJSCacheDialog />

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 // Administration: v2-native page chrome for the admin-only sections.
 // Uses the shared `RTabNav` primitive (same one Library Management
-// uses) to expose Users / Groups / Tasks / Streaming as sibling tabs,
+// uses) to expose Users / Groups / Tasks / Streaming / Announcement as sibling tabs,
 // keeping the `?tab=` query param so deep links survive a reload.
 //
 // Tabs are gated by scope: `users.write` for the groups tab,
@@ -10,6 +10,7 @@
 // reach this route (route-level guard already checks `app.admin`).
 import { computed, watch } from "vue";
 import { useI18n } from "vue-i18n";
+import AnnouncementSection from "@/components/Settings/AnnouncementSection.vue";
 import CreateUserDialog from "@/components/Settings/CreateUserDialog.vue";
 import EditUserDialog from "@/components/Settings/EditUserDialog.vue";
 import GroupFormDialog from "@/components/Settings/GroupFormDialog.vue";
@@ -29,8 +30,14 @@ const auth = storeAuth();
 const permissions = storePermissions();
 const isAdmin = useCan("app.admin");
 
-type Tab = "users" | "groups" | "tasks" | "streaming";
-const validTabs: readonly Tab[] = ["users", "groups", "tasks", "streaming"];
+type Tab = "users" | "groups" | "tasks" | "streaming" | "announcement";
+const validTabs: readonly Tab[] = [
+  "users",
+  "groups",
+  "tasks",
+  "streaming",
+  "announcement",
+];
 
 const tab = useRouteQueryParam("tab", "users", validTabs);
 
@@ -61,6 +68,11 @@ const tabs = computed<RTabNavItem[]>(() => {
       id: "streaming",
       label: t("settings.streaming"),
       icon: "mdi-monitor-dashboard",
+    });
+    items.push({
+      id: "announcement",
+      label: t("settings.announcement"),
+      icon: "mdi-bullhorn-outline",
     });
   }
   return items;
@@ -95,6 +107,8 @@ const tabModel = computed<string>({
     <PermissionGroupsSection v-else-if="tab === 'groups'" />
     <TasksSection v-else-if="tab === 'tasks'" />
     <StreamingSection v-else-if="tab === 'streaming' && isAdmin" />
+    <!-- Stays mounted across tab changes so an unsaved draft is not dropped. -->
+    <AnnouncementSection v-if="isAdmin" v-show="tab === 'announcement'" />
 
     <CreateUserDialog />
     <EditUserDialog />

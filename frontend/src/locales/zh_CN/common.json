@@ -12,6 +12,8 @@
   "all-files-skipped": "所有文件均已跳过，未上传任何内容。",
   "all-platforms": "所有平台",
   "and": "和",
+  "announcement-dismiss": "知道了",
+  "announcement-dismiss-failed": "无法关闭公告",
   "apply": "应用",
   "artists-n": "{n} 位艺术家",
   "ascii-only": "仅限ASCII字符",

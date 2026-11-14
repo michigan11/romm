@@ -12,6 +12,8 @@
   "all-files-skipped": "Tutti i file saltati, niente è stato caricato.",
   "all-platforms": "Tutte le piattaforme",
   "and": "e",
+  "announcement-dismiss": "Ho capito",
+  "announcement-dismiss-failed": "Impossibile chiudere l'annuncio",
   "apply": "Applica",
   "artists-n": "{n} artista | {n} artisti",
   "ascii-only": "Solo caratteri ASCII",

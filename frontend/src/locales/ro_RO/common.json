@@ -12,6 +12,8 @@
   "all-files-skipped": "Toate fișierele au fost ignorate, nimic nu a fost încărcat.",
   "all-platforms": "Toate platformele",
   "and": "și",
+  "announcement-dismiss": "Am înțeles",
+  "announcement-dismiss-failed": "Anunțul nu a putut fi închis",
   "apply": "Aplică",
   "artists-n": "{n} artist | {n} artiști",
   "ascii-only": "Caractere ASCII numai",

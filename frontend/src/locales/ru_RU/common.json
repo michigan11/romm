@@ -12,6 +12,8 @@
   "all-files-skipped": "Все файлы пропущены, ничего не загружено.",
   "all-platforms": "Все платформы",
   "and": "и",
+  "announcement-dismiss": "Понятно",
+  "announcement-dismiss-failed": "Не удалось закрыть объявление",
   "apply": "Применить",
   "artists-n": "{n} исполнитель | {n} исполнителя | {n} исполнителей",
   "ascii-only": "Только ASCII символы",

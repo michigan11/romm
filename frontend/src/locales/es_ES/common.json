@@ -12,6 +12,8 @@
   "all-files-skipped": "Se omitieron todos los archivos, nada que subir.",
   "all-platforms": "Todas las plataformas",
   "and": "y",
+  "announcement-dismiss": "Entendido",
+  "announcement-dismiss-failed": "No se pudo cerrar el aviso",
   "apply": "Aplicar",
   "artists-n": "{n} artista | {n} artistas",
   "ascii-only": "Solo caracteres ASCII",

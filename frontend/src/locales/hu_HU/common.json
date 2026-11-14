@@ -12,6 +12,8 @@
   "all-files-skipped": "Minden fájl kihagyva, nincs feltöltött elem.",
   "all-platforms": "Összes platform",
   "and": "és",
+  "announcement-dismiss": "Értem",
+  "announcement-dismiss-failed": "A közlemény bezárása nem sikerült",
   "apply": "Alkalmaz",
   "artists-n": "{n} előadó | {n} előadó",
   "ascii-only": "Csak ASCII karakterek",

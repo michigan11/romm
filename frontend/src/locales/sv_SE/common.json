@@ -12,6 +12,8 @@
   "all-files-skipped": "Alla filer hoppades över. Inget laddades upp.",
   "all-platforms": "Alla plattformar",
   "and": "och",
+  "announcement-dismiss": "Uppfattat",
+  "announcement-dismiss-failed": "Det gick inte att stänga meddelandet",
   "apply": "Tillämpa",
   "artists-n": "{n} artist | {n} artister",
   "ascii-only": "Endast ASCII-tecken",
