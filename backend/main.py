@@ -55,6 +55,7 @@ from endpoints.recommendations import router as recommendations_router
 from endpoints.responses.streaming import SOCKET_PAYLOADS as STREAMING_SOCKET_PAYLOADS
 from endpoints.roms import router as rom_router
 from endpoints.saves import router as saves_router
+from endpoints.scheduled_announcements import router as scheduled_announcements_router
 from endpoints.screenshots import router as screenshots_router
 from endpoints.search import router as search_router
 from endpoints.states import router as states_router
@@ -193,6 +194,7 @@ app.include_router(audit_events_router, prefix="/api")
 app.include_router(user_router, prefix="/api")
 app.include_router(client_tokens_router, prefix="/api")
 app.include_router(announcement_router, prefix="/api")
+app.include_router(scheduled_announcements_router, prefix="/api")
 app.include_router(notifications_router, prefix="/api")
 app.include_router(notification_channels_router, prefix="/api")
 app.include_router(device_router, prefix="/api")

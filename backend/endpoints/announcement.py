@@ -8,7 +8,10 @@ from endpoints.responses.announcement import (
 )
 from handler.auth.constants import Scope
 from handler.auth.dependencies import assert_admin, get_permissions
-from handler.database import db_announcement_handler
+from handler.database import (
+    db_announcement_handler,
+    db_scheduled_announcement_handler,
+)
 from models.announcement import Announcement
 from utils.router import APIRouter
 
@@ -48,7 +51,8 @@ def _view(request: Request) -> AnnouncementSchema:
 
 @protected_route(router.get, "", [Scope.ME_READ])
 def get_announcement(request: Request) -> AnnouncementSchema:
-    """The current notice. Disabled text is returned only to an admin."""
+    """The current notice, after publishing any scheduled notice that is due. Disabled text is returned only to an admin."""
+    db_scheduled_announcement_handler.apply_due()
     return _view(request)
 
 
