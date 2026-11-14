@@ -147,6 +147,7 @@
   "search": "Keresés",
   "select": "Kiválasztás",
   "select-platform": "Válassz platformot",
+  "send-feedback": "Visszajelzés küldése",
   "server-offline-retrying": "A kiszolgálókapcsolat megszakadt, újrapróbálkozás…",
   "server-reconnected": "Reconnected to the server",
   "server-stats": "Szerver statisztika",

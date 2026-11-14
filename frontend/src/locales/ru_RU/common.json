@@ -147,6 +147,7 @@
   "search": "Поиск",
   "select": "Выбрать",
   "select-platform": "Выберите платформу",
+  "send-feedback": "Отправить отзыв",
   "server-offline-retrying": "Соединение с сервером потеряно, повторная попытка…",
   "server-reconnected": "Reconnected to the server",
   "server-stats": "Статистика сервера",

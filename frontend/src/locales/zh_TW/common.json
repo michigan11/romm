@@ -147,6 +147,7 @@
   "search": "搜尋",
   "select": "選擇",
   "select-platform": "選擇平台",
+  "send-feedback": "傳送意見",
   "server-offline-retrying": "與伺服器的連線已中斷，正在重試…",
   "server-reconnected": "Reconnected to the server",
   "server-stats": "伺服器狀態",

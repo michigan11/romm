@@ -147,6 +147,7 @@
   "search": "Hledat",
   "select": "Vybrat",
   "select-platform": "Vyberte platformu",
+  "send-feedback": "Odeslat zpětnou vazbu",
   "server-offline-retrying": "Spojení se serverem bylo ztraceno, zkoušíme znovu…",
   "server-reconnected": "Reconnected to the server",
   "server-stats": "Statistiky serveru",

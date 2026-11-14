@@ -147,6 +147,7 @@
   "search": "Search",
   "select": "Select",
   "select-platform": "Select a platform",
+  "send-feedback": "Send feedback",
   "server-offline-retrying": "Server connection lost, retrying…",
   "server-reconnected": "Reconnected to the server",
   "server-stats": "Server stats",

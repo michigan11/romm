@@ -7,6 +7,7 @@ import { useI18n } from "vue-i18n";
 import { useRouter } from "vue-router";
 import { useDisplay } from "vuetify";
 import AboutDialog from "@/components/Settings/AboutDialog.vue";
+import FeedbackDialog from "@/components/common/FeedbackDialog.vue";
 import { ROUTES } from "@/plugins/router";
 import { refetchCSRFToken } from "@/services/api";
 import identityApi from "@/services/api/identity";
@@ -190,6 +191,17 @@ function onClose() {
         {{ t("common.server-stats") }}
       </v-list-item>
       <v-list-item
+        :tabindex="tabIndex"
+        class="mt-1"
+        rounded
+        append-icon="mdi-message-text-outline"
+        aria-label="Send feedback"
+        role="listitem"
+        @click="emitter?.emit('showFeedbackDialog', null)"
+      >
+        {{ t("common.send-feedback") }}
+      </v-list-item>
+      <v-list-item
         v-if="auth.user?.role === 'admin'"
         :tabindex="tabIndex"
         class="mt-1"
@@ -217,4 +229,5 @@ function onClose() {
   </v-navigation-drawer>
 
   <AboutDialog />
+  <FeedbackDialog />
 </template>

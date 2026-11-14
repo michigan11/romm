@@ -14,6 +14,7 @@ import ManualUploadTargetDialog from "@/v2/components/Dialogs/ManualUploadTarget
 import MatchRomDialog from "@/v2/components/Dialogs/MatchRomDialog.vue";
 import RefreshMetadataDialog from "@/v2/components/Dialogs/RefreshMetadataDialog.vue";
 import SearchCoverDialog from "@/v2/components/Dialogs/SearchCoverDialog.vue";
+import SendFeedbackDialog from "@/v2/components/Dialogs/SendFeedbackDialog.vue";
 import ShowQRCodeDialog from "@/v2/components/Dialogs/ShowQRCodeDialog.vue";
 import NewVersionBanner from "@/v2/components/Notifications/NewVersionBanner.vue";
 import NotificationHost from "@/v2/components/Notifications/NotificationHost.vue";
@@ -44,6 +45,7 @@ defineOptions({ inheritAttrs: false });
   <CreateSmartCollectionDialog />
   <AddPhysicalGameDialog />
   <AboutDialog />
+  <SendFeedbackDialog />
   <AnnouncementDialog />
   <ChangelogDialog />
   <LoadSaveStateDialog />

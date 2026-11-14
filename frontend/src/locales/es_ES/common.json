@@ -147,6 +147,7 @@
   "search": "Buscar",
   "select": "Seleccionar",
   "select-platform": "Seleccionar plataforma",
+  "send-feedback": "Enviar comentarios",
   "server-offline-retrying": "Se perdió la conexión con el servidor, reintentando…",
   "server-reconnected": "Conexión con el servidor restablecida",
   "server-stats": "Estadísticas del servidor",

@@ -38,6 +38,7 @@ from endpoints.configs import router as configs_router
 from endpoints.device import router as device_router
 from endpoints.device.auth import router as device_auth_router
 from endpoints.export import router as export_router
+from endpoints.feedback import router as feedback_router
 from endpoints.feeds import router as feeds_router
 from endpoints.firmware import router as firmware_router
 from endpoints.heartbeat import router as heartbeat_router
@@ -193,6 +194,7 @@ app.include_router(audit_events_router, prefix="/api")
 app.include_router(user_router, prefix="/api")
 app.include_router(client_tokens_router, prefix="/api")
 app.include_router(announcement_router, prefix="/api")
+app.include_router(feedback_router, prefix="/api")
 app.include_router(notifications_router, prefix="/api")
 app.include_router(notification_channels_router, prefix="/api")
 app.include_router(device_router, prefix="/api")
